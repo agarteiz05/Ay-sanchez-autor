@@ -24,6 +24,479 @@
     .nav-logo-icon{width:28px;height:28px;background:var(--black);border-radius:6px;display:flex;align-items:center;justify-content:center}
     .nav-logo-icon svg{width:16px;height:16px}
     .nav-links{display:flex;align-items:center;gap:32px;list-style:none}
-    .nav-links a{text-decoration:none;color:var(--black);font-size:14px;opacity:0.7;transition:opacity 0.2s=
+    .nav-links a{text-decoration:none;color:var(--black);font-size:14px;opacity:0.7;transition:opacity 0.2s}
     .nav-links a:hover{opacity:1}
     .nav-cta{background:transparent;border:1.5px solid var(--black);color:var(--black)!important;padding:8px 20px;border-radius:40px;font-size:14px;font-weight:500;cursor:pointer;text-decoration:none;opacity:1!important;transition:background 0.2s,color 0.2s}
+    .nav-cta:hover{background:var(--black)!important;color:var(--cream)!important}
+
+    .ticker-banner{background:var(--black);color:var(--cream);padding:10px 0;overflow:hidden;font-size:13px;letter-spacing:0.03em}
+    .ticker-track{display:flex;gap:80px;animation:ticker 25s linear infinite;white-space:nowrap}
+    .ticker-item{display:flex;align-items:center;gap:8px;opacity:0.8}
+    .ticker-dot{width:6px;height:6px;background:var(--violet);border-radius:50%}
+    @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    .hero{padding:120px 40px 80px;text-align:center;max-width:900px;margin:0 auto}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--cream-dark);border:1px solid var(--border);border-radius:40px;padding:6px 16px;font-size:12px;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;color:var(--gray);margin-bottom:32px}
+    .hero-badge-dot{width:6px;height:6px;background:#22C55E;border-radius:50%;animation:pulse-dot 2s infinite}
+    @keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:0.4}}
+    h1{font-family:'Hedvig Letters Serif',serif;font-weight:400;font-size:clamp(42px,6vw,72px);line-height:1.1;letter-spacing:-0.02em;color:var(--black);margin-bottom:24px}
+    .hero-sub{font-size:18px;color:var(--gray);max-width:560px;margin:0 auto 40px;line-height:1.65;font-weight:300}
+    .hero-actions{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+    .btn-primary{background:var(--violet);color:white;border:none;padding:14px 28px;border-radius:40px;font-size:15px;font-weight:500;cursor:pointer;text-decoration:none;transition:background 0.2s,transform 0.1s;display:inline-flex;align-items:center;gap:8px}
+    .btn-primary:hover{background:var(--violet-hover);transform:translateY(-1px)}
+    .btn-secondary{background:transparent;color:var(--black);border:1.5px solid var(--border);padding:14px 28px;border-radius:40px;font-size:15px;font-weight:400;cursor:pointer;text-decoration:none;transition:border-color 0.2s,background 0.2s;display:inline-flex;align-items:center;gap:8px}
+    .btn-secondary:hover{border-color:var(--black);background:rgba(0,0,0,0.04)}
+
+    .hero-visual{max-width:1100px;margin:80px auto 0;padding:0 40px}
+    .dashboard-mockup{background:white;border:1px solid var(--border);border-radius:16px;box-shadow:0 4px 40px rgba(0,0,0,0.08);overflow:hidden}
+    .mockup-topbar{background:var(--cream-dark);border-bottom:1px solid var(--border);padding:12px 20px;display:flex;align-items:center;gap:8px}
+    .dot{width:10px;height:10px;border-radius:50%}
+    .dot-red{background:#FF5F57}.dot-yellow{background:#FEBC2E}.dot-green{background:#28C840}
+    .mockup-body{display:grid;grid-template-columns:220px 1fr;min-height:380px}
+    .mockup-sidebar{border-right:1px solid var(--border);padding:24px 16px;background:white}
+    .sidebar-label{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--gray);font-weight:500;margin-bottom:12px;padding:0 8px}
+    .sidebar-item{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:8px;font-size:13px;color:var(--black);margin-bottom:2px;cursor:default}
+    .sidebar-item span[style]{opacity:0.45}
+    .sidebar-item.active{background:var(--cream-dark);font-weight:500}
+    .sidebar-item.active span[style]{opacity:0.85}
+    .mockup-main{padding:28px 32px}
+    .mockup-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px}
+    .mockup-balance-label{font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px}
+    .mockup-balance{font-family:'Hedvig Letters Serif',serif;font-size:38px;font-weight:400;letter-spacing:-0.02em;color:var(--black)}
+    .mockup-balance span{font-size:20px;color:var(--gray)}
+    .add-funds-btn{background:var(--violet);color:white;border:none;padding:9px 18px;border-radius:40px;font-size:13px;font-weight:500;cursor:default;display:flex;align-items:center;gap:6px}
+    .limits-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+    .limit-card{background:var(--cream);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+    .limit-card-label{font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px}
+    .limit-card-value{font-size:22px;font-weight:500;letter-spacing:-0.02em}
+    .limit-card-sub{font-size:11px;color:var(--gray);margin-top:2px}
+    .tx-list-label{font-size:12px;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray);margin-bottom:12px;font-weight:500}
+    .tx-item{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px}
+    .tx-item:last-child{border-bottom:none}
+    .tx-left{display:flex;align-items:center;gap:10px}
+    .tx-icon{width:28px;height:28px;background:var(--cream-dark);border-radius:6px;display:flex;align-items:center;justify-content:center}
+    .tx-name{font-weight:500;color:var(--black)}
+    .tx-time{font-size:11px;color:var(--gray);margin-top:1px}
+    .tx-amount{font-weight:500;color:var(--black);font-size:13px}
+    .tx-amount.debit{color:#E53E3E}
+
+    .logos-section{padding:60px 40px;text-align:center;border-top:1px solid var(--border)}
+    .logos-label{font-size:13px;color:var(--gray);text-transform:uppercase;letter-spacing:0.08em;font-weight:500;margin-bottom:32px}
+    .logos-row{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
+    .logo-pill{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:500;color:var(--gray)}
+    .logo-pill-icon{width:22px;height:22px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:11px}
+
+    .section{padding:100px 40px;max-width:1100px;margin:0 auto}
+    .section-centered{text-align:center}
+    .section-tag{display:inline-block;font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray);margin-bottom:20px}
+    h2{font-family:'Hedvig Letters Serif',serif;font-weight:400;font-size:clamp(32px,4vw,52px);line-height:1.15;letter-spacing:-0.02em;margin-bottom:16px}
+    .section-desc{font-size:17px;color:var(--gray);max-width:520px;margin:0 auto;line-height:1.65;font-weight:300}
+
+    .pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:60px}
+    .pain-card{background:white;border:1px solid var(--border);border-radius:12px;padding:28px 24px}
+    .pain-icon{width:40px;height:40px;background:var(--cream-dark);border:1px solid var(--border);border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+    .pain-card h3{font-family:'Hedvig Letters Serif',serif;font-size:20px;font-weight:400;margin-bottom:10px;line-height:1.3}
+    .pain-card p{font-size:14px;color:var(--gray);line-height:1.6}
+
+    .steps-section{padding:100px 40px;background:white;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .steps-inner{max-width:1100px;margin:0 auto}
+    .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:64px}
+    .step{position:relative;padding-top:10px}
+    .step-number{font-family:'Hedvig Letters Serif',serif;font-size:72px;font-weight:400;color:var(--cream-dark);line-height:1;margin-bottom:20px;letter-spacing:-0.04em}
+    .step h3{font-family:'Hedvig Letters Serif',serif;font-size:26px;font-weight:400;margin-bottom:12px}
+    .step p{font-size:15px;color:var(--gray);line-height:1.65}
+    .step-tag{display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:40px;padding:4px 12px;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.08em;color:var(--gray);margin-bottom:14px}
+
+    .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-top:64px}
+    .feature{background:white;padding:32px 28px}
+    .feature-icon{width:42px;height:42px;background:var(--cream);border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+    .feature h3{font-size:16px;font-weight:500;margin-bottom:8px;letter-spacing:-0.01em}
+    .feature p{font-size:14px;color:var(--gray);line-height:1.6}
+
+    .security-section{padding:100px 40px;background:var(--cream-dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .security-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .security-text h2{margin-bottom:20px}
+    .security-text p{font-size:16px;color:var(--gray);line-height:1.7;margin-bottom:32px}
+    .security-badges{display:flex;flex-wrap:wrap;gap:8px}
+    .badge{display:flex;align-items:center;gap:7px;background:white;border:1px solid var(--border);border-radius:40px;padding:6px 14px;font-size:12px;font-weight:500;color:var(--black)}
+    .security-visual{background:white;border:1px solid var(--border);border-radius:16px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+    .cosign-row{display:flex;align-items:center;gap:12px;padding:16px;border-radius:10px;background:var(--cream);margin-bottom:10px}
+    .cosign-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .cosign-label{font-size:13px;font-weight:500}
+    .cosign-sub{font-size:12px;color:var(--gray);margin-top:2px}
+    .cosign-check{margin-left:auto;width:22px;height:22px;background:var(--violet);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .cosign-check svg{width:11px;height:11px}
+    .cosign-arrow{text-align:center;color:var(--gray-light);font-size:18px;margin:4px 0}
+    .cosign-result{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border:1.5px solid var(--violet);border-radius:10px;margin-top:10px}
+    .cosign-result-label{font-size:13px;font-weight:500}
+    .cosign-result-sub{font-size:12px;color:var(--gray)}
+    .cosign-result-badge{background:rgba(114,91,255,0.1);color:var(--violet);font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:0.05em}
+
+    .compat-section{padding:80px 40px;text-align:center}
+    .compat-inner{max-width:1100px;margin:0 auto}
+    .compat-grid{display:flex;align-items:stretch;justify-content:center;gap:16px;margin-top:48px;flex-wrap:wrap}
+    .compat-card{background:white;border:1px solid var(--border);border-radius:12px;padding:20px 28px;display:flex;align-items:center;gap:14px;min-width:180px}
+    .compat-card.coming-soon{opacity:0.5;background:var(--cream-dark)}
+    .compat-icon{width:38px;height:38px;background:var(--black);border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-size:15px;font-weight:700;flex-shrink:0}
+    .compat-name{font-size:15px;font-weight:500;letter-spacing:-0.01em}
+    .compat-type{font-size:12px;color:var(--gray)}
+    .soon-tag{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;background:var(--cream-dark);color:var(--gray);border:1px solid var(--border);padding:2px 8px;border-radius:20px;margin-left:auto}
+
+    .faq-section{padding:100px 40px;background:white;border-top:1px solid var(--border)}
+    .faq-inner{max-width:720px;margin:0 auto}
+    .faq-title{text-align:center;margin-bottom:56px}
+    .faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+    .faq-q{font-size:16px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;color:var(--black)}
+    .faq-arrow{width:20px;height:20px;flex-shrink:0;transition:transform 0.2s;color:var(--gray)}
+    .faq-a{font-size:15px;color:var(--gray);line-height:1.65;margin-top:12px;display:none}
+    .faq-item.open .faq-a{display:block}
+    .faq-item.open .faq-arrow{transform:rotate(180deg)}
+
+    .cta-final{background:var(--dark-bg);color:var(--dark-text);padding:120px 40px;text-align:center;position:relative;overflow:hidden}
+    .cta-final::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(114,91,255,0.2) 0%,transparent 70%);pointer-events:none}
+    .cta-final h2{color:var(--dark-text);max-width:700px;margin:0 auto 20px}
+    .cta-final p{color:rgba(248,245,242,0.5);font-size:17px;max-width:420px;margin:0 auto 44px;font-weight:300}
+    .cta-note{margin-top:20px;font-size:13px;color:rgba(248,245,242,0.3)}
+
+    footer{background:var(--dark-bg);border-top:1px solid rgba(255,255,255,0.08);padding:40px;display:flex;align-items:center;justify-content:space-between}
+    .footer-logo{color:rgba(248,245,242,0.5);font-size:14px;font-weight:500}
+    .footer-links{display:flex;gap:24px;list-style:none}
+    .footer-links a{text-decoration:none;color:rgba(248,245,242,0.35);font-size:13px;transition:color 0.2s}
+    .footer-links a:hover{color:rgba(248,245,242,0.7)}
+
+    .fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+    .fade-up.visible{opacity:1;transform:translateY(0)}
+
+    @media(max-width:768px){
+      .pain-grid,.steps-grid,.features-grid{grid-template-columns:1fr}
+      .security-inner{grid-template-columns:1fr}
+      .mockup-body{grid-template-columns:1fr}
+      .mockup-sidebar{display:none}
+      nav{padding:0 20px}
+      .nav-links{display:none}
+      .section,.hero{padding:60px 20px}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="5" height="5" rx="1" fill="white" opacity="0.9"/><rect x="9" y="2" width="5" height="5" rx="1" fill="white" opacity="0.9"/><rect x="2" y="9" width="5" height="5" rx="1" fill="white" opacity="0.9"/><circle cx="11.5" cy="11.5" r="2.5" fill="#725BFF"/></svg>
+    </div>
+    Agent Wallet
+  </a>
+  <ul class="nav-links">
+    <li><a href="#how-it-works">How it works</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#security">Security</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#download" class="nav-cta">Download for Mac</a></li>
+  </ul>
+</nav>
+
+<div class="ticker-banner">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="ticker-dot"></span> No crypto knowledge required</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Non-custodial co-sign architecture</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Works with Claude Code &amp; Claude Cowork</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Per-call spending limits</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Fund with a credit card</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Zero config MCP integration</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> No crypto knowledge required</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Non-custodial co-sign architecture</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Works with Claude Code &amp; Claude Cowork</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Per-call spending limits</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Fund with a credit card</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Zero config MCP integration</span>
+  </div>
+</div>
+
+<div class="hero fade-up">
+  <div class="hero-badge"><span class="hero-badge-dot"></span>Now in early access</div>
+  <h1>Your AI agent can<br>now pay for itself.</h1>
+  <p class="hero-sub">Give Claude Code, Claude Cowork, or OpenClaw a wallet. Agents autonomously buy what they need — you stay in control.</p>
+  <div class="hero-actions">
+    <a href="#download" class="btn-primary">&#8595; Download for Mac</a>
+    <a href="#how-it-works" class="btn-secondary">See how it works</a>
+  </div>
+</div>
+
+<div class="hero-visual fade-up">
+  <div class="dashboard-mockup">
+    <div class="mockup-topbar">
+      <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+    </div>
+    <div class="mockup-body">
+      <div class="mockup-sidebar">
+        <div class="sidebar-label">Agent Wallet</div>
+        <div class="sidebar-item active"><span style="width:16px;height:16px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M18 5h2v2h-2zM4 3h14v2H4zM2 5h2v14H2zm2 14h16v2H4zm12-4h6v2h-6zm0-4h6v2h-6zm-2 0h2v6h-2z"/> <path d="M20 7h2v12h-2zM4 7h16v2H4z"/></svg></span> Balance</div>
+        <div class="sidebar-item"><span style="width:16px;height:16px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M4 2h16v2H4zm0 18h16v2H4zM2 4h2v16H2zm18 0h2v16h-2zm-9 8h2v6h-2zm-4 2h2v4H7zm8-8h2v12h-2z"/></svg></span> Spending</div>
+        <div class="sidebar-item"><span style="width:16px;height:16px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M4 14h2v6H4zm6 0h2v6h-2zm-4-2h4v2H6zm0 8h4v2H6zm-4-4h2v2H2zm20-8h-4V6h4z"/> <path d="M10 16h12v2H10zm4-8H2V6h12zm6-4v2h-2V4zm0 6V8h-2v2zm-6-8h4v2h-4zm0 10h4v-2h-4zm-2-8h2v2h-2zm0 6h2V8h-2z"/></svg></span> Limits</div>
+        <div class="sidebar-item"><span style="width:16px;height:16px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M10 5h12v2H10zm0 4h8v2h-8zm0 4h12v2H10zm0 4h8v2h-8zm-4-6H4V9h2v2ZM4 9H2V7h2v2Zm4 0H6V7h2v2ZM6 7H4V5h2v2Zm-2 6h2v2H4zm0 4h2v2H4zm-2 0v-2h2v2zm4 0v-2h2v2z"/></svg></span> Transactions</div>
+        <div class="sidebar-item"><span style="width:16px;height:16px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M4 14h2v6H4zm6 0h2v6h-2zm-4-2h4v2H6zm0 8h4v2H6zm-4-4h2v2H2zm20-8h-4V6h4z"/> <path d="M10 16h12v2H10zm4-8H2V6h12zm6-4v2h-2V4zm0 6V8h-2v2zm-6-8h4v2h-4zm0 10h4v-2h-4zm-2-8h2v2h-2zm0 6h2V8h-2z"/></svg></span> Settings</div>
+      </div>
+      <div class="mockup-main">
+        <div class="mockup-header">
+          <div>
+            <div class="mockup-balance-label">Available Balance</div>
+            <div class="mockup-balance">$48.<span>72</span></div>
+          </div>
+          <button class="add-funds-btn"><span style="width:14px;height:14px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"> <path d="M13 11h7v2h-7v7h-2v-7H4v-2h7V4h2v7Z"/></svg></span> Add funds</button>
+        </div>
+        <div class="limits-grid">
+          <div class="limit-card">
+            <div class="limit-card-label">Per-call limit</div>
+            <div class="limit-card-value">$1.00</div>
+            <div class="limit-card-sub">Default · editable</div>
+          </div>
+          <div class="limit-card">
+            <div class="limit-card-label">Daily limit</div>
+            <div class="limit-card-value">$25.00</div>
+            <div class="limit-card-sub">$3.40 used today</div>
+          </div>
+        </div>
+        <div class="tx-list-label">Recent activity</div>
+        <div class="tx-item">
+          <div class="tx-left">
+            <div class="tx-icon"><span style="width:14px;height:14px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M22 22h-2v-2h2v2Zm-2-2h-2v-2h2v2Zm-6-2H6v-2h8v2Zm4 0h-2v-2h2v2ZM6 16H4v-2h2v2Zm10 0h-2v-2h2v2ZM4 14H2V6h2v8Zm14 0h-2V6h2v8ZM6 6H4V4h2v2Zm10 0h-2V4h2v2Zm-2-2H6V2h8v2Z"/></svg></span></div>
+            <div><div class="tx-name">Perplexity API call</div><div class="tx-time">2 minutes ago · Claude Code</div></div>
+          </div>
+          <div class="tx-amount debit">&#8722;$0.04</div>
+        </div>
+        <div class="tx-item">
+          <div class="tx-left">
+            <div class="tx-icon"><span style="width:14px;height:14px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M7 2h10v2H7zM5 4h2v2H5zm14 0h-2v2h2zM7 17h2v2H7zm2 2h2v2H9zm6-2h2v2h-2zm-2 2h2v2h-2zm-2 2h2v2h-2zm-6-7h2v3H5zm12 0h2v3h-2zM3 6h2v8H3zm18 0h-2v8h2zM10 6h4v2h-4zM8 8h2v4H8zm2 4h4v2h-4zm4-4h2v4h-2z"/></svg></span></div>
+            <div><div class="tx-name">Maps data lookup</div><div class="tx-time">14 minutes ago · Claude Cowork</div></div>
+          </div>
+          <div class="tx-amount debit">&#8722;$0.12</div>
+        </div>
+        <div class="tx-item">
+          <div class="tx-left">
+            <div class="tx-icon"><span style="width:14px;height:14px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M4 4h16v2H4zm0 14h16v2H4zM2 6h2v12H2zm18 0h2v12h-2zM4 8h16v4H4zm2 6h6v2H6z"/></svg></span></div>
+            <div><div class="tx-name">Top-up via Visa &bull;&bull;&bull;4291</div><div class="tx-time">Yesterday · Manual</div></div>
+          </div>
+          <div class="tx-amount" style="color:#22C55E">+$50.00</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="logos-section">
+  <div class="logos-label">Trusted infrastructure</div>
+  <div class="logos-row">
+    <div class="logo-pill"><div class="logo-pill-icon" style="background:#0052FF;color:white;font-size:9px;font-weight:800">CB</div>Coinbase</div>
+    <div class="logo-pill"><div class="logo-pill-icon" style="background:#635BFF;color:white;font-size:9px;font-weight:800">S</div>Stripe</div>
+    <div class="logo-pill"><div class="logo-pill-icon" style="background:#1A1A2E;color:white;font-size:8px;font-weight:700">TK</div>Turnkey</div>
+    <div class="logo-pill"><div class="logo-pill-icon" style="background:#0EA5E9;color:white;font-size:9px;font-weight:700">B</div>Base</div>
+    <div class="logo-pill"><div class="logo-pill-icon" style="background:#CC785C;color:white;font-size:8px;font-weight:700">A</div>Anthropic MCP</div>
+  </div>
+</div>
+
+<div class="section section-centered fade-up" id="problem">
+  <span class="section-tag">The problem</span>
+  <h2>Agents keep stopping<br>to ask for permission.</h2>
+  <p class="section-desc">Your AI agents are powerful — until they hit a paywall. Then they stop, interrupt you, and wait.</p>
+  <div class="pain-grid">
+    <div class="pain-card">
+      <div class="pain-icon"><span style="width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M5 8h14v2H5zm0 12h14v2H5zM3 10h2v10H3zm16 0h2v10h-2zM7 4h2v4H7zm2-2h6v2H9zm6 2h2v4h-2z"/></svg></span></div>
+      <h3>"Please provide your API key to continue."</h3>
+      <p>Your agent stalls mid-task. Every. Single. Time. You paste credentials into config files and pray it works.</p>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon"><span style="width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M4 14h2v6H4zm6 0h2v6h-2zm-4-2h4v2H6zm0 8h4v2H6zm-4-4h2v2H2zm20-8h-4V6h4z"/> <path d="M10 16h12v2H10zm4-8H2V6h12zm6-4v2h-2V4zm0 6V8h-2v2zm-6-8h4v2h-4zm0 10h4v-2h-4zm-2-8h2v2h-2zm0 6h2V8h-2z"/></svg></span></div>
+      <h3>Config files, env vars, CLI commands.</h3>
+      <p>Getting an agent set up for paid services means wading through documentation and terminal windows. No more.</p>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon"><span style="width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M4 2h16v2H4zm0 18h16v2H4zM2 4h2v16H2zm18 0h2v16h-2zm-9 8h2v6h-2zm-4 2h2v4H7zm8-8h2v12h-2z"/></svg></span></div>
+      <h3>No idea what your agent is spending.</h3>
+      <p>Which calls cost money? How much? You find out at the end of the month on a bill you didn't expect.</p>
+    </div>
+  </div>
+</div>
+
+<div class="steps-section" id="how-it-works">
+  <div class="steps-inner">
+    <div style="text-align:center">
+      <span class="section-tag">How it works</span>
+      <h2>Up and running<br>in under 5 minutes.</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step fade-up">
+        <div class="step-number">01</div>
+        <span class="step-tag">Install</span>
+        <h3>Download the Mac app</h3>
+        <p>No CLI. No config files. No blockchain knowledge. Double-click, follow the prompts, done. Your agent runtime registers automatically via MCP.</p>
+      </div>
+      <div class="step fade-up" style="transition-delay:0.1s">
+        <div class="step-number">02</div>
+        <span class="step-tag">Fund</span>
+        <h3>Add funds with a credit card</h3>
+        <p>Use any Visa or Mastercard. We handle the conversion. You see a clean credit balance — no wallets, no seed phrases, no crypto complexity.</p>
+      </div>
+      <div class="step fade-up" style="transition-delay:0.2s">
+        <div class="step-number">03</div>
+        <span class="step-tag">Run</span>
+        <h3>Let your agent work autonomously</h3>
+        <p>Your agent discovers its wallet via MCP, pays for services automatically within your limits, and reports back everything it spent.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section section-centered fade-up" id="features">
+  <span class="section-tag">Features</span>
+  <h2>Everything you need.<br>Nothing you don't.</h2>
+  <p class="section-desc">Simple for humans. Powerful for agents.</p>
+  <div class="features-grid">
+    <div class="feature">
+      <div class="feature-icon"><span style="width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M4 4h16v2H4zm0 14h16v2H4zM2 6h2v12H2zm18 0h2v12h-2zM4 8h16v4H4zm2 6h6v2H6z"/></svg></span></div>
+      <h3>Credit card funding</h3>
+      <p>Top up with any Visa or Mastercard. No crypto wallets, no seed phrases, no wire transfers. Just enter your card and go.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon"><span style="width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M4 2h16v2H4zM2 4h2v10H2zm18 0h2v10h-2zM4 14h2v2H4zm2 2h2v2H6zm4 4h4v2h-4zm10-6h-2v2h2zm-2 2h-2v2h2zm-2 2h-2v2h2zm-6 0H8v2h2z"/></svg></span></div>
+      <h3>Spending limits</h3>
+      <p>Per-call cap defaults to $1. Daily cap defaults to $25. Your agent operates within those bounds — automatically. Change them any time.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon"><span style="width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M16 20H8v-2h8v2Zm-8-2H4v-2h4v2Zm12 0h-4v-2h4v2ZM4 16H2v-2h2v2Zm10-6h-2v2h2v-2h2v4h-2v2h-4v-2H8v-4h2V8h4v2Zm8 6h-2v-2h2v2ZM2 14H0v-4h2v4Zm22 0h-2v-4h2v4ZM4 10H2V8h2v2Zm18 0h-2V8h2v2ZM8 8H4V6h4v2Zm12 0h-4V6h4v2Zm-4-2H8V4h8v2Z"/></svg></span></div>
+      <h3>Full transaction visibility</h3>
+      <p>Real-time dashboard. Every call logged with timestamp, agent, and service. No surprises at month-end.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon"><span style="width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M4 13h8v6h2v2h-2v2h-2v-8H2v-4h2v2Zm12 6h-2v-2h2v2Zm2-2h-2v-2h2v2Zm2-2h-2v-2h2v2Zm-6-6h8v4h-2v-2h-8V5h-2V3h2V1h2v8Zm-8 2H4V9h2v2Zm2-2H6V7h2v2Zm2-2H8V5h2v2Z"/></svg></span></div>
+      <h3>Auto top-up</h3>
+      <p>Set a minimum balance threshold. Agent Wallet refills automatically so your agent never stops mid-task waiting for funds.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon"><span style="width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M5 8h14v2H5zm0 12h14v2H5zM3 10h2v10H3zm16 0h2v10h-2zM7 4h2v4H7zm2-2h6v2H9zm6 2h2v4h-2z"/></svg></span></div>
+      <h3>Non-custodial security</h3>
+      <p>Co-sign architecture means no single party can move your funds. Not your agent. Not us. Only both together, within your limits.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon"><span style="width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M4 12h16v2H4zm0 8h16v2H4zm-2-6h2v6H2zm18 0h2v6h-2zm-4 2h2v2h-2zm-4 0h2v2h-2zm2-6h2v2h-2zm-3-2h2v2h-2zM9 4h2v2H9zm10 0h2v2h-2zm-2 4h2v2h-2zm-4-2h4v2h-4zm-2-4h8v2h-8z"/></svg></span></div>
+      <h3>Zero-config MCP</h3>
+      <p>The wallet registers itself with your agent runtime via Model Context Protocol. No setup commands. Your agent just knows it has a wallet.</p>
+    </div>
+  </div>
+</div>
+
+<div class="security-section" id="security">
+  <div class="security-inner">
+    <div class="security-text fade-up">
+      <span class="section-tag">Security</span>
+      <h2>You're always in control.</h2>
+      <p>Every transaction requires two independent approvals before your funds move. Your agent initiates, our backend validates limits. Turnkey's secure enclave holds the key but won't sign until both approve.</p>
+      <p>No single party — not your agent, not us — can move funds unilaterally. Every payment attempt is logged with a full audit trail.</p>
+      <div class="security-badges">
+        <span class="badge"><span style="width:13px;height:13px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M5 8h14v2H5zm0 12h14v2H5zM3 10h2v10H3zm16 0h2v10h-2zM7 4h2v4H7zm2-2h6v2H9zm6 2h2v4h-2z"/></svg></span> Non-custodial</span>
+        <span class="badge"><span style="width:13px;height:13px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M4 13h8v6h2v2h-2v2h-2v-8H2v-4h2v2Zm12 6h-2v-2h2v2Zm2-2h-2v-2h2v2Zm2-2h-2v-2h2v2Zm-6-6h8v4h-2v-2h-8V5h-2V3h2V1h2v8Zm-8 2H4V9h2v2Zm2-2H6V7h2v2Zm2-2H8V5h2v2Z"/></svg></span> Powered by Turnkey</span>
+        <span class="badge"><span style="width:13px;height:13px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M10 5h12v2H10zm0 4h8v2h-8zm0 4h12v2H10zm0 4h8v2h-8zm-4-6H4V9h2v2ZM4 9H2V7h2v2Zm4 0H6V7h2v2ZM6 7H4V5h2v2Zm-2 6h2v2H4zm0 4h2v2H4zm-2 0v-2h2v2zm4 0v-2h2v2z"/></svg></span> Full audit logs</span>
+        <span class="badge"><span style="width:13px;height:13px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M4 2h16v2H4zM2 4h2v10H2zm18 0h2v10h-2zM4 14h2v2H4zm2 2h2v2H6zm4 4h4v2h-4zm10-6h-2v2h2zm-2 2h-2v2h2zm-2 2h-2v2h2zm-6 0H8v2h2z"/></svg></span> Limits enforced on-chain</span>
+      </div>
+    </div>
+    <div class="security-visual fade-up">
+      <div style="font-size:13px;font-weight:500;color:var(--gray);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:20px">Co-sign flow</div>
+      <div class="cosign-row">
+        <div class="cosign-icon" style="background:#EEEEFF"><span style="width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M4 12h16v2H4zm0 8h16v2H4zm-2-6h2v6H2zm18 0h2v6h-2zm-4 2h2v2h-2zm-4 0h2v2h-2zm2-6h2v2h-2zm-3-2h2v2h-2zM9 4h2v2H9zm10 0h2v2h-2zm-2 4h2v2h-2zm-4-2h4v2h-4zm-2-4h8v2h-8z"/></svg></span></div>
+        <div><div class="cosign-label">Agent runtime</div><div class="cosign-sub">Signs with local keypair (Keychain)</div></div>
+        <div class="cosign-check"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+      <div class="cosign-arrow">&#8595;</div>
+      <div class="cosign-row">
+        <div class="cosign-icon" style="background:#EEFFEE"><span style="width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M4 20h16v2H4zm16-10h2v10h-2zM2 10h2v10H2zm2-2h2v2H4zm2-2h2v2H6zm2-2h2v2H8zm2-2h4v2h-4zm4 2h2v2h-2zm2 2h2v2h-2zm2 2h2v2h-2zM8 14h2v6H8zm2-2h4v2h-4zm4 2h2v6h-2z"/></svg></span></div>
+        <div><div class="cosign-label">Agent Wallet backend</div><div class="cosign-sub">Validates limits, provides 2nd approval</div></div>
+        <div class="cosign-check"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+      <div class="cosign-arrow">&#8595;</div>
+      <div class="cosign-row">
+        <div class="cosign-icon" style="background:#FFEEEE"><span style="width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M5 8h14v2H5zm0 12h14v2H5zM3 10h2v10H3zm16 0h2v10h-2zM7 4h2v4H7zm2-2h6v2H9zm6 2h2v4h-2z"/></svg></span></div>
+        <div><div class="cosign-label">Turnkey enclave</div><div class="cosign-sub">Holds key, requires both approvals</div></div>
+        <div class="cosign-check" style="background:var(--gray-light)"><svg viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="2.5" fill="white"/></svg></div>
+      </div>
+      <div class="cosign-result">
+        <div><div class="cosign-result-label">Transaction authorized</div><div class="cosign-result-sub">Both signatures verified &middot; Within limits</div></div>
+        <div class="cosign-result-badge">Approved</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="compat-section fade-up">
+  <div class="compat-inner">
+    <span class="section-tag">Compatibility</span>
+    <h2>Works with your agents.</h2>
+    <div class="compat-grid">
+      <div class="compat-card"><div class="compat-icon" style="background:#CC785C">C</div><div><div class="compat-name">Claude Code</div><div class="compat-type">Desktop agent</div></div></div>
+      <div class="compat-card"><div class="compat-icon" style="background:#CC785C">C</div><div><div class="compat-name">Claude Cowork</div><div class="compat-type">Desktop agent</div></div></div>
+      <div class="compat-card"><div class="compat-icon" style="background:#2A2825">O</div><div><div class="compat-name">OpenClaw</div><div class="compat-type">Cloud agent</div></div></div>
+      <div class="compat-card coming-soon"><div class="compat-icon" style="background:var(--gray-light)">+</div><div><div class="compat-name">More agents</div><div class="compat-type">Coming soon</div></div><span class="soon-tag">Soon</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="faq-title fade-up"><span class="section-tag">FAQ</span><h2>Common questions.</h2></div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Do I need to know anything about crypto?<svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+      <div class="faq-a">Not at all. You fund the wallet with a credit card and see a plain dollar balance. Everything else — USDC, Base, gas — happens invisibly in the background.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What if my agent tries to overspend?<svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+      <div class="faq-a">Spending limits are enforced at the wallet layer and by Turnkey's policy engine. If a call exceeds your per-call cap, the transaction is blocked automatically.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Where is my money stored? Is it safe?<svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+      <div class="faq-a">Your balance lives as USDC on Base, secured by Turnkey's non-custodial architecture inside an AWS Nitro Enclave. No single party can move funds without the others.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Which agents are supported today?<svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+      <div class="faq-a">Claude Code, Claude Cowork, and OpenClaw are supported today. If your agent supports MCP, it can integrate — reach out and we'll help you get set up.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Is it free to install?<svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+      <div class="faq-a">Yes, completely free to install. You only pay for what your agent actually uses. We don't charge platform fees in the current beta.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Can I withdraw my balance?<svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+      <div class="faq-a">In v1, the balance is designed for agent usage. Full withdrawal options will be available in a future release.</div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-final" id="download">
+  <h2>Give your agent<br>its first dollar.</h2>
+  <p>Install in 2 minutes. Fund with a card. Watch your agent work without stopping.</p>
+  <a href="#" class="btn-primary" style="font-size:16px;padding:16px 36px">&#8595; Download for Mac &#8212; It's free</a>
+  <p class="cta-note">macOS 13+ &middot; Early access</p>
+</div>
+
+<footer>
+  <div class="footer-logo">Agent Wallet</div>
+  <ul class="footer-links">
+    <li><a href="#">Docs</a></li>
+    <li><a href="#">Privacy</a></li>
+    <li><a href="#">Terms</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</footer>
+
+<script>
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
