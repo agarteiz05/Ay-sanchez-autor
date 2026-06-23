@@ -308,7 +308,16 @@
       margin-bottom: 20px;
     }
 
-    .email-form { display: flex; gap: 8px; }
+    .email-form { display: flex; gap: 8px; width: 100%; }
+
+    .email-form .formkit-form {
+      width: 100% !important;
+      max-width: none !important;
+    }
+
+    .email-form .formkit-fields {
+      width: 100%;
+    }
 
     .email-input {
       flex: 1;
